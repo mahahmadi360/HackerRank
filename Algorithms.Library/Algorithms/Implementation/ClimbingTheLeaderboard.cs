@@ -45,6 +45,7 @@ public static class ClimbingTheLeaderboard
         var rankCount = ranked.Count;
         var rankIndex = 0;
         var rank = 1;
+        var result = new int[player.Count];
         var scoreIndex = player.Count - 1;
         while (rankIndex < rankCount)
         {
@@ -57,7 +58,7 @@ public static class ClimbingTheLeaderboard
 
             if (player[scoreIndex] >= ranked[rankIndex])
             {
-                player[scoreIndex] = rank;
+                result[scoreIndex] = rank;
                 scoreIndex--;
 
                 if (scoreIndex == -1)
@@ -69,7 +70,7 @@ public static class ClimbingTheLeaderboard
             rank++;
         }
 
-        return player;
+        return result.ToList();
     }
 
     public static List<int> climbingLeaderboard3(List<int> ranked, List<int> player)
