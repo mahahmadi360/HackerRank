@@ -45,11 +45,14 @@ namespace AlgorithmsTest.Implementation
                 "basdn" };
 
             var result = SparseArrays.matchingStrings(inputs, queries);
-            var expectedResult = new List<int> {1,3,4,3,2};
+            var expectedResult = new List<int> { 1, 3, 4, 3, 2 };
 
             Assert.Equal(string.Join(",", expectedResult), string.Join(",", result));
 
+
         }
+
+        
 
     }
 }

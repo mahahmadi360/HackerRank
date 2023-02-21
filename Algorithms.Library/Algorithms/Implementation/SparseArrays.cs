@@ -66,5 +66,4 @@ namespace Algorithms.Implementation
         }
 
     }
-    }
 }
